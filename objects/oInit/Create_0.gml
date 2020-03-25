@@ -5,6 +5,7 @@ global.flag_is_browser = (os_browser != browser_not_a_browser)
 global.flag_is_desktop = (os_type == os_windows or os_type == os_macosx or os_type == os_linux) and !global.flag_is_browser
 #macro SECOND 100 // == seconds(1)
 
+randomize()
 device_mouse_dbclick_enable(false)
 #endregion
 
