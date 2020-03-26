@@ -1,6 +1,5 @@
 /// @description 턴 순서 초기화
 ds_list_clear(global.turn_prelist)
-ds_queue_clear(global.turn_queue)
 
 var temp_list = ds_list_create()
 with oEntityParent
