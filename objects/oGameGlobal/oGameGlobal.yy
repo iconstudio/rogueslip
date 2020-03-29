@@ -20,7 +20,7 @@
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 12,
+            "enumb": 18,
             "eventtype": 7,
             "m_owner": "984be6fc-e6e3-48a8-96c5-ee819ba8fcf5"
         },
@@ -30,7 +30,7 @@
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 13,
+            "enumb": 19,
             "eventtype": 7,
             "m_owner": "984be6fc-e6e3-48a8-96c5-ee819ba8fcf5"
         },
@@ -50,7 +50,37 @@
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 14,
+            "enumb": 20,
+            "eventtype": 7,
+            "m_owner": "984be6fc-e6e3-48a8-96c5-ee819ba8fcf5"
+        },
+        {
+            "id": "7e1f007f-df74-4c41-bd79-412b88b3a41a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 15,
+            "eventtype": 7,
+            "m_owner": "984be6fc-e6e3-48a8-96c5-ee819ba8fcf5"
+        },
+        {
+            "id": "12f1dc8d-5f5d-4ad7-aa4f-d919ef7bbdae",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 16,
+            "eventtype": 7,
+            "m_owner": "984be6fc-e6e3-48a8-96c5-ee819ba8fcf5"
+        },
+        {
+            "id": "d162403e-209a-4e83-afef-cc0a02f97f17",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 17,
             "eventtype": 7,
             "m_owner": "984be6fc-e6e3-48a8-96c5-ee819ba8fcf5"
         }

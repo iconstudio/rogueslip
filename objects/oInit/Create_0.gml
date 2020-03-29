@@ -27,9 +27,6 @@ if global.flag_is_mobile {
 	display_set_sleep_margin(10)
 }
 
-default_width = room_width
-default_height = room_width * 9 / 16
-global.resolutions_default = [default_width, default_height]
 #endregion
 
 #region 음성

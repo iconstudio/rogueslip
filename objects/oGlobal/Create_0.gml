@@ -24,3 +24,11 @@ global.turns_real = 0
 global.turn_prelist = ds_list_create()
 global.turn_queue = ds_queue_create()
 global.turn_current_id = noone
+
+// 청크가 3x3칸
+enum theme {
+	castle,
+	cave
+}
+global.map_theme = theme.castle
+global.map_data = ds_grid_create(3, 3)
