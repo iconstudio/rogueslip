@@ -22,20 +22,62 @@ var pressed_ver = (move_ver_p != 0)
 if pressed_hor and pressed_ver {
 	x += move_hor_p * GRID
 	y += move_ver_p * GRID
+	check_io_time_horizontal = 0
+	check_io_time_vertical = 0
 } else if pressed_hor {
-	if check_io_time_vertical == 0 {
-		
-	} else {
-		
+	if check_io_time_vertical != 0 {
+		check_io_time_vertical = check_io_duration
 	}
 	if check_io_time_horizontal == 0 {
 		check_io_time_horizontal = check_io_duration
+		check_io_dir_horizontal = move_hor_p
+	}
+	/*
+	if check_io_time_vertical == 0 {
+		if check_io_time_horizontal == 0 {
+			check_io_time_horizontal = check_io_duration
+			check_io_dir_horizontal = move_hor_p
+		}
 	} else {
 		x += move_hor_p * GRID
+		y += check_io_dir_vertical * GRID
+		check_io_time_horizontal = 0
+		check_io_time_vertical = 0
 	}
+	*/
 } else if pressed_ver {
-	y += move_ver_p * GRID
+	/*
+	if check_io_time_horizontal == 0 {
+		if check_io_time_vertical == 0 {
+			check_io_time_vertical = check_io_duration
+			check_io_time_vertical = move_hor_p
+		}
+	} else {
+		x += check_io_dir_horizontal * GRID
+		y += move_ver_p * GRID
+		check_io_time_horizontal = 0
+		check_io_time_vertical = 0
+	}
+	*/
+	if check_io_time_horizontal != 0 {
+		check_io_time_horizontal = check_io_duration
+	}
+	if check_io_time_vertical == 0 {
+		check_io_time_vertical = check_io_duration
+		check_io_dir_vertical = move_ver_p
+	}
 }
 
+if 0 < check_io_time_horizontal {
+	if --check_io_time_horizontal <= 0 {
+		check_io_time_horizontal = 0
+		x += check_io_dir_horizontal * GRID
+	}
+}
 
-
+if 0 < check_io_time_vertical {
+	if --check_io_time_vertical <= 0 {
+		check_io_time_vertical = 0
+		y += check_io_dir_vertical * GRID
+	}
+}
