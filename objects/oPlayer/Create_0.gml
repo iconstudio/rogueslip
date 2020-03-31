@@ -1,3 +1,5 @@
+move_snap(GRID, GRID)
+
 check_io_duration = seconds(0.1)
 check_io_time_horizontal = 0
 check_io_dir_horizontal = 0

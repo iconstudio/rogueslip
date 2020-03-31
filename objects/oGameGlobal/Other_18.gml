@@ -11,4 +11,6 @@ for (var i = 0; i < ds_list_size(temp_list); ++i)
 	ds_list_add(global.turn_prelist, temp_list[| i])
 
 ds_list_destroy(temp_list)
+
+precache_size = ds_list_size(global.turn_prelist)
 global.turn_current_id = global.player_id

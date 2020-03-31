@@ -1,4 +1,7 @@
 /// @description 행동
+if global.turn_current_id != id
+	exit
+
 var check_io_l = global.io_left
 var check_io_r = global.io_right
 var check_io_u = global.io_up
@@ -24,6 +27,9 @@ if pressed_hor and pressed_ver {
 	y += move_ver_p * GRID
 	check_io_time_horizontal = 0
 	check_io_time_vertical = 0
+
+	turn_go_next()
+	exit
 } else if pressed_hor {
 	if check_io_time_vertical != 0 {
 		check_io_time_vertical = check_io_duration
@@ -32,33 +38,7 @@ if pressed_hor and pressed_ver {
 		check_io_time_horizontal = check_io_duration
 		check_io_dir_horizontal = move_hor_p
 	}
-	/*
-	if check_io_time_vertical == 0 {
-		if check_io_time_horizontal == 0 {
-			check_io_time_horizontal = check_io_duration
-			check_io_dir_horizontal = move_hor_p
-		}
-	} else {
-		x += move_hor_p * GRID
-		y += check_io_dir_vertical * GRID
-		check_io_time_horizontal = 0
-		check_io_time_vertical = 0
-	}
-	*/
 } else if pressed_ver {
-	/*
-	if check_io_time_horizontal == 0 {
-		if check_io_time_vertical == 0 {
-			check_io_time_vertical = check_io_duration
-			check_io_time_vertical = move_hor_p
-		}
-	} else {
-		x += check_io_dir_horizontal * GRID
-		y += move_ver_p * GRID
-		check_io_time_horizontal = 0
-		check_io_time_vertical = 0
-	}
-	*/
 	if check_io_time_horizontal != 0 {
 		check_io_time_horizontal = check_io_duration
 	}
@@ -68,16 +48,32 @@ if pressed_hor and pressed_ver {
 	}
 }
 
-if 0 < check_io_time_horizontal {
-	if --check_io_time_horizontal <= 0 {
-		check_io_time_horizontal = 0
+var moving_hor = (0 < check_io_time_horizontal)
+var moving_ver = (0 < check_io_time_vertical)
+if moving_hor and moving_ver {
+	if --check_io_time_horizontal <= 0 or --check_io_time_vertical <= 0 {
 		x += check_io_dir_horizontal * GRID
-	}
-}
-
-if 0 < check_io_time_vertical {
-	if --check_io_time_vertical <= 0 {
-		check_io_time_vertical = 0
 		y += check_io_dir_vertical * GRID
+		check_io_time_horizontal = 0
+		check_io_time_vertical = 0
+
+		turn_go_next()
+		exit
+	}
+} else if moving_hor {
+	if --check_io_time_horizontal <= 0 {
+		x += check_io_dir_horizontal * GRID
+		check_io_time_horizontal = 0
+
+		turn_go_next()
+		exit
+	}
+} else if moving_ver {
+	if --check_io_time_vertical <= 0 {
+		y += check_io_dir_vertical * GRID
+		check_io_time_vertical = 0
+
+		turn_go_next()
+		exit
 	}
 }

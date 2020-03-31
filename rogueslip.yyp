@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "0058e901-d39c-4142-a74d-32452905c671",
+            "Value": {
+                "id": "5c3207b1-3423-42ef-b237-2a3732cce3a1",
+                "resourcePath": "objects\\oRoamer\\oRoamer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0142c399-46e4-4f63-97aa-2039211c5910",
             "Value": {
                 "id": "2a6f0edd-57de-40ab-95d7-696a636c9f76",
@@ -247,6 +255,14 @@
             }
         },
         {
+            "Key": "949f9662-8bba-4b1f-a1f7-da7df0328918",
+            "Value": {
+                "id": "298e48bb-6561-4dff-853c-36c1657a25df",
+                "resourcePath": "scripts\\turn_go_next\\turn_go_next.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "984be6fc-e6e3-48a8-96c5-ee819ba8fcf5",
             "Value": {
                 "id": "1543a84f-9b81-4e45-aff4-13dcc0ce60d8",
@@ -284,6 +300,14 @@
                 "id": "3636569a-6c89-4b6d-bf85-770473de142d",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "b215a1ef-1bea-4fee-b0c4-71c74ad20da4",
+            "Value": {
+                "id": "37bc444a-b03d-4163-b9f2-114323412418",
+                "resourcePath": "sprites\\sRoamer\\sRoamer.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -401,6 +425,7 @@
     ],
     "script_order": [
         "6d508e59-70ba-4c8c-b235-cd39cacf9bb8",
+        "949f9662-8bba-4b1f-a1f7-da7df0328918",
         "67c03682-dba2-4c61-8779-d8939071da98"
     ],
     "tutorial": ""
