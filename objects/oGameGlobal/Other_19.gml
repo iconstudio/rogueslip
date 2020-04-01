@@ -4,3 +4,4 @@ if 0 < precache_size {
 	for (var i = 0; i < precache_size; ++i)
 		ds_queue_enqueue(global.turn_queue, global.turn_prelist[| i])
 }
+global.turn_current_id = ds_queue_dequeue(global.turn_queue)

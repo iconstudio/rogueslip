@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "25238115-e275-4079-886f-0967d57929d0",
+            "Value": {
+                "id": "ed3c7000-f7c4-4607-a650-b0c6e3de561b",
+                "resourcePath": "scripts\\check_collide\\check_collide.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "282d3480-53f8-4494-adc7-a881e13e8409",
             "Value": {
                 "id": "bcfe8ff3-25af-421f-bef3-95c0f210f72d",
@@ -116,6 +124,14 @@
                 "id": "6d5060f7-0903-4e9e-ad46-3806a40606ba",
                 "resourcePath": "views\\35a5cca6-4d80-49b4-afba-437741cfc774.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "424157a2-752c-4c47-af73-05f41c29f196",
+            "Value": {
+                "id": "e29b0f3b-d920-4d9c-87b1-dc2f086b65a5",
+                "resourcePath": "scripts\\entity_init\\entity_init.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -231,6 +247,14 @@
             }
         },
         {
+            "Key": "84bcf88c-0ba6-49b4-9cac-49446ca26c2b",
+            "Value": {
+                "id": "76750c95-650e-4803-af5f-de98810466be",
+                "resourcePath": "views\\84bcf88c-0ba6-49b4-9cac-49446ca26c2b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "84c58156-8a73-437a-8744-142907a83e26",
             "Value": {
                 "id": "b0509ca9-2bb1-4adf-a11c-6df579692cdf",
@@ -300,6 +324,14 @@
                 "id": "3636569a-6c89-4b6d-bf85-770473de142d",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "aa0a4a21-8419-483f-9d83-f2e72097d294",
+            "Value": {
+                "id": "6bb524b4-688a-406b-a189-237058b7a2d9",
+                "resourcePath": "views\\aa0a4a21-8419-483f-9d83-f2e72097d294.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -383,6 +415,14 @@
             }
         },
         {
+            "Key": "dd85024e-d419-4221-8521-644e30b366a4",
+            "Value": {
+                "id": "f4d29799-dc38-42ac-8004-d92b9c7c2cf0",
+                "resourcePath": "scripts\\entity_destroy\\entity_destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
             "Value": {
                 "id": "c9469db5-08c3-455e-91fd-b62266f60652",
@@ -425,7 +465,10 @@
     ],
     "script_order": [
         "6d508e59-70ba-4c8c-b235-cd39cacf9bb8",
+        "25238115-e275-4079-886f-0967d57929d0",
         "949f9662-8bba-4b1f-a1f7-da7df0328918",
+        "424157a2-752c-4c47-af73-05f41c29f196",
+        "dd85024e-d419-4221-8521-644e30b366a4",
         "67c03682-dba2-4c61-8779-d8939071da98"
     ],
     "tutorial": ""

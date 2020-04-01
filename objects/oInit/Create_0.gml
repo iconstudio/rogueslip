@@ -10,6 +10,12 @@ randomize()
 device_mouse_dbclick_enable(false)
 #endregion
 
+#region 설정
+global.setting_show_bars = true
+global.setting_show_name = true
+
+#endregion
+
 #region 화면
 application_surface_enable(true)
 application_surface_draw_enable(true)

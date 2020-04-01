@@ -7,14 +7,13 @@ if 0 < left {
 		}
 	}
 
-	ds_queue_dequeue(global.turn_queue)
 	global.turns += 1.0 // 나중엔 따로 처리를 해줘야할 것.
 	global.turns_real++
 
-	if left - 1 <= 0 {
+	if left - 1 <= 0
 		event_user(9)
-	}
-	global.turn_current_id = global.turn_prelist[| 0]
+	else
+		global.turn_current_id = ds_queue_dequeue(global.turn_queue)
 } else {
 	event_user(9)
 }
