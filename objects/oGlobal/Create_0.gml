@@ -32,3 +32,11 @@ enum theme {
 }
 global.map_theme = theme.castle
 global.map_data = ds_grid_create(3, 3)
+
+enum cursor {
+	normal, 
+	attack, // 근거리와 원거리 모두 포함
+	throw, 
+	find, // Ctrl-X
+	pause
+}
