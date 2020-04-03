@@ -1,3 +1,8 @@
+entity_init()
+
+stat_exp = 0
+stat_strength = 0
+
 move_snap(GRID, GRID)
 
 check_io_duration = seconds(0.1)

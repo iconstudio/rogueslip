@@ -3,6 +3,8 @@
 //struct status {
 stat_name = "" // 이름
 stat_honor = "" // 칭호
+stat_level = 0
+stat_exp_dead = 1
 stat_hp = 1
 stat_hp_max = stat_hp
 stat_mp = 1
