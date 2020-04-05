@@ -40,3 +40,16 @@ enum cursor {
 	find, // Ctrl-X
 	pause
 }
+
+enum allies {
+	none,
+	player,
+	neutral,
+	hosties
+}
+
+key_e = ord("E")
+key_i = ord("I")
+key_s = ord("S")
+key_status_1 = ord("@")
+key_status_2 = ord("%")

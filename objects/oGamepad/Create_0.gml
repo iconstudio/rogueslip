@@ -3,11 +3,13 @@ enum gamepad_type {
 	ps,
 	others
 }
-
+threshold = 0.5
 index = -1
 type = 0
 meter = 0
 pad_list = ds_priority_create()
+stick_hvalue_thresh = false
+stick_vvalue_thresh = false
 
 if gamepad_is_supported() {
 	var gp_number = gamepad_get_device_count()
