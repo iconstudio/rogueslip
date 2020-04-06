@@ -48,29 +48,38 @@ if pressed_hor and pressed_ver {
 	check_io_time[1] = check_io_period
 	check_io_dir[0] = move_p[0]
 	check_io_dir[1] = move_p[1]
+	show_debug_message("diagonal")
 } else if pressed_hor {
-	if check_io_time[0] == 0 {
-		if check_io_time[1] != 0 {
+	if check_io_time[0] <= 0 {
+		if check_io_time[1] != 0
 			check_io_time[1] = check_io_period
-		}
+		else
+			check_io_dir[1] = 0
+
 		check_io_time[0] = check_io_period
 		check_io_dir[0] = move_p[0]
-		check_io_dir[1] = 0
+		show_debug_message("horizontal")
+		show_debug_message(check_io_dir[0])
+		show_debug_message(check_io_dir[1])
 	}
 } else if pressed_ver {
-	if check_io_time[1] == 0 {
-		if check_io_time[0] != 0 {
+	if check_io_time[1] <= 0 {
+		if check_io_time[0] != 0
 			check_io_time[0] = check_io_period
-		}
+		else
+			check_io_dir[0] = 0
+
 		check_io_time[1] = check_io_period
-		check_io_dir[0] = 0
 		check_io_dir[1] = move_p[1]
+		show_debug_message("vertical")
+		show_debug_message(check_io_dir[0])
+		show_debug_message(check_io_dir[1])
 	}
 }
 
 var moving_hor = (0 < check_io_time[0])
 var moving_ver = (0 < check_io_time[1])
-if moving_hor or moving_ver { // 이동
+if moving_hor or moving_ver {
 	if --check_io_time[0] <= 0 or --check_io_time[1] <= 0 {
 		var on_wall = check_collide_vector(check_io_dir[0], check_io_dir[1])
 		var on_entity = check_entity_vector(check_io_dir[0], check_io_dir[1])
@@ -78,14 +87,13 @@ if moving_hor or moving_ver { // 이동
 			action = ACT_NONE
 		} else if on_entity { // 상호작용
 			action = ACT_ATTACK
-		} else {
+			target_action = on_entity
+		} else { // 이동
 			action = ACT_MOVE
 			target_x = x + check_io_dir[0] * GRID
 			target_y = y + check_io_dir[1] * GRID
 			check_io_time[0] = 0
 			check_io_time[1] = 0
-			check_io_dir[0] = 0
-			check_io_dir[1] = 0
 		}
 	}
 } else if global.io_pressed_wait { // 대기
@@ -101,6 +109,8 @@ if action != ACT_NONE {
 		case ACT_MOVE:
 			x = target_x
 			y = target_y
+			//check_io_dir[0] = 0
+			//check_io_dir[1] = 0
 			turn_left = false
 		break
 
