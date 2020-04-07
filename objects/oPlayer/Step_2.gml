@@ -92,6 +92,8 @@ if moving_hor and moving_ver {
 		moving_check = true
 		check_io_dir[0] = 0
 	}
+} else if global.io_pressed_autoaction { // 자동 행동
+	
 } else if global.io_pressed_wait { // 대기
 	action = ACT_WAIT
 }

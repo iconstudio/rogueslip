@@ -22,12 +22,13 @@ if keyboard_check_pressed(vk_numpad1) {
 	global.io_pressed_up = true
 }
 
+var check_dot = keyboard_check_pressed(key_dot)
 global.io_pressed_autoaction = io_check_autoaction()
-global.io_pressed_wait = keyboard_check_pressed(key_s) or keyboard_check_pressed(vk_numpad5)
-global.io_pressed_inventory = keyboard_check_pressed(key_i) or keyboard_check_pressed(key_e)
-global.io_pressed_status = keyboard_check_pressed(key_status_1) or keyboard_check_pressed(key_status_2)
+global.io_pressed_wait = keyboard_check_pressed(key_s) or keyboard_check_pressed(vk_numpad5) or check_dot
+global.io_pressed_inventory = keyboard_check_pressed(key_i) or keyboard_check_pressed(key_e) or keyboard_check_pressed(key_inventory)
+global.io_pressed_status = keyboard_check_pressed(key_status_1) or keyboard_check_pressed(key_status_2) or keyboard_check_pressed(key_status_3)
 global.io_pressed_menu = keyboard_check_pressed(vk_escape) or keyboard_check_pressed(vk_backspace)
 
-global.io_pressed_yes = keyboard_check_pressed(vk_enter)
+global.io_pressed_yes = keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_space) or check_dot
 global.io_pressed_no = keyboard_check_pressed(vk_escape) or keyboard_check_pressed(vk_backspace)
 global.io_pressed_back = global.io_pressed_no

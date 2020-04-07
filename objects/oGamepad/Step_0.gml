@@ -29,6 +29,11 @@ if !stick_vvalue_thresh and threshold < check_axis_v {
 	stick_vvalue_thresh = true
 	global.io_pressed_down = true
 }
+global.io_pressed_autoaction |= gamepad_button_check_pressed(index, gp_shoulderr)
+global.io_pressed_wait |= gamepad_button_check_pressed(index, gp_shoulderl)
+global.io_pressed_inventory |= gamepad_button_check_pressed(index, gp_face4)
+global.io_pressed_status |= gamepad_button_check_pressed(index, gp_face3)
+global.io_pressed_menu |= gamepad_button_check_pressed(index, gp_select)
 
 if -threshold <= check_axis_h and check_axis_h <= threshold
 	stick_hvalue_thresh = false

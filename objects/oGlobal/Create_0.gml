@@ -33,23 +33,11 @@ enum theme {
 global.map_theme = theme.castle
 global.map_data = ds_grid_create(3, 3)
 
-enum cursor {
-	normal, 
-	attack, // 근거리와 원거리 모두 포함
-	throw, 
-	find, // Ctrl-X
-	pause
-}
-
-enum allies {
-	none,
-	player,
-	neutral,
-	hosties
-}
-
 key_e = ord("E")
 key_i = ord("I")
 key_s = ord("S")
 key_status_1 = ord("@")
 key_status_2 = ord("%")
+key_status_3 = ord("=")
+key_inventory = ord("/")
+key_dot = ord(".")
