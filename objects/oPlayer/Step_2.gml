@@ -81,63 +81,37 @@ else
 if moving_hor and moving_ver {
 	if check_io_time[0] <= 0 and check_io_time[1] <= 0 {
 		moving_check = true
-		var on_wall = check_collide_vector(check_io_dir[0], check_io_dir[1])
-		var on_entity = check_entity_vector(check_io_dir[0], check_io_dir[1])
-		if on_wall {
-			action = ACT_NONE
-		} else if on_entity { // 상호작용
-			action = ACT_ATTACK
-			target_action = on_entity
-		} else { // 이동
-			action = ACT_MOVE
-			target_x = x + check_io_dir[0] * GRID
-			target_y = y + check_io_dir[1] * GRID
-			check_io_time[0] = 0
-			check_io_time[1] = 0
-		}
 	}
 } else if moving_hor {
 	if check_io_time[0] <= 0 {
 		moving_check = true
 		check_io_dir[1] = 0
-		var on_wall = check_collide_vector(check_io_dir[0], 0)
-		var on_entity = check_entity_vector(check_io_dir[0], 0)
-		if on_wall {
-			action = ACT_NONE
-		} else if on_entity { // 상호작용
-			action = ACT_ATTACK
-			target_action = on_entity
-		} else { // 이동
-			action = ACT_MOVE
-			target_x = x + check_io_dir[0] * GRID
-			target_y = y
-			check_io_time[0] = 0
-		}
 	}
 } else if moving_ver {
 	if check_io_time[1] <= 0 {
 		moving_check = true
 		check_io_dir[0] = 0
-
-		var on_wall = check_collide_vector(0, check_io_dir[1])
-		var on_entity = check_entity_vector(0, check_io_dir[1])
-		if on_wall {
-			action = ACT_NONE
-		} else if on_entity { // 상호작용
-			action = ACT_ATTACK
-			target_action = on_entity
-		} else { // 이동
-			action = ACT_MOVE
-			target_x = x
-			target_y = y + check_io_dir[1] * GRID
-			check_io_time[1] = 0
-		}
 	}
 } else if global.io_pressed_wait { // 대기
 	action = ACT_WAIT
 }
 
-
+if moving_check {
+	var on_wall = check_collide_vector(check_io_dir[0], check_io_dir[1])
+	var on_entity = check_entity_vector(check_io_dir[0], check_io_dir[1])
+	if on_wall {
+		action = ACT_NONE
+	} else if on_entity { // 상호작용
+		action = ACT_ATTACK
+		target_action = on_entity
+	} else { // 이동
+		action = ACT_MOVE
+		target_x = x + check_io_dir[0] * GRID
+		target_y = y + check_io_dir[1] * GRID
+		check_io_time[0] = 0
+		check_io_time[1] = 0
+	}
+}
 
 if action != ACT_NONE {
 	switch action {

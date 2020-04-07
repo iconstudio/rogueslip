@@ -24,6 +24,8 @@ gpu_set_ztestenable(true)
 gpu_set_zwriteenable(true)
 display_set_timing_method(tm_countvsyncs)
 
+size_width = 1280
+size_height = 960
 if global.flag_is_mobile {
 	display_set_sleep_margin(4)
 	window_set_fullscreen(true)
@@ -32,6 +34,10 @@ if global.flag_is_mobile {
 	display_set_sleep_margin(30)
 } else {
 	display_set_sleep_margin(10)
+
+	if global.flag_is_desktop {
+		window_set_size(size_width, size_height)
+	}
 }
 
 #endregion
