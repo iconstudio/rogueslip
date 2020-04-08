@@ -25,10 +25,11 @@ gpu_set_zwriteenable(true)
 display_set_timing_method(tm_countvsyncs)
 
 // 비율은 4 : 3
-default_width = 640
-default_height = 480
-over_width = 160
-size_width = default_width + over_width * 2
+target_width = 800
+default_width = room_width
+default_height = room_height
+over_width = (target_width - default_width) * 0.5
+size_width = target_width
 size_height = default_height
 if global.flag_is_mobile {
 	display_set_sleep_margin(4)
@@ -45,6 +46,8 @@ if global.flag_is_mobile {
 	display_set_sleep_margin(10)
 
 	if global.flag_is_desktop {
+		window_set_min_width(default_width)
+		window_set_min_height(default_height)
 		window_set_size(size_width, size_height)
 	}
 }

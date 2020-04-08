@@ -107,18 +107,31 @@ if moving_check {
 		target_action = on_entity
 		if target_action.stat_force == allies.player { // 완전히 동맹
 			// 위치 바꾸기
+			if entity_is_sane(target_action) {
+				entity_swap_position(target_action)
+			}
 		} else if target_action.stat_force == allies.ally_with_player { // 동맹
 			// 위치 바꾸기
+			if entity_is_sane(target_action) {
+				entity_swap_position(target_action)
+			}
 		} else if target_action.stat_force == allies.neutral { // 중립
 			// 일정 조건 하에 위치 바꾸기 혹은 다른 상호작용
 			target_last = target_action
+			if entity_is_sane(target_action) {
+				entity_swap_position(target_action)
+			} else {
+				
+			}
 		} else if target_action.stat_force == allies.hosties { // 적대적
 			// 근접 공격
 			action = act.attack
 			target_last = target_action
 		} else {
 			// 위치 바꾸기
-			
+			if entity_is_sane(target_action) {
+				entity_swap_position(target_action)
+			}
 		}
 	} else { // 이동
 		action = act.move
@@ -132,6 +145,7 @@ if moving_check {
 if action != act.none {
 	switch action {
 		case act.attack:
+			player_attack(target_action)
 			turn_left = false
 		break
 
