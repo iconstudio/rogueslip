@@ -78,8 +78,19 @@ enum cursor {
 enum allies {
 	none,
 	player,
+	ally_with_player,
 	neutral,
 	hosties
+}
+
+// 행동
+enum act {
+	none,
+	wait,
+	move,
+	swap,
+	attack,
+	dead
 }
 
 alarm[0] = 1

@@ -28,12 +28,7 @@ stat_ability_info = ds_list_create()
 
 //}
 
-// 행동
-ACT_NONE = 0
-ACT_WAIT = 1
-ACT_MOVE = 3
-ACT_ATTACK = 10
-action = ACT_NONE
+action = act.none
 target_action = noone
 target_last = noone
 target_x = 0

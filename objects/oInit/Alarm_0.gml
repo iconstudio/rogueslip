@@ -8,7 +8,7 @@ global.gui_height = size_height
 if global.flag_is_mobile {
 } else {
 	window_center()
-	window_set_position(window_get_x(), 48)
+	//window_set_position(window_get_x(), 48)
 }
 
 room_goto_next()

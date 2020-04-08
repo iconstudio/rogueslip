@@ -95,19 +95,33 @@ if moving_hor and moving_ver {
 } else if global.io_pressed_autoaction { // 자동 행동
 	
 } else if global.io_pressed_wait { // 대기
-	action = ACT_WAIT
+	action = act.wait
 }
 
 if moving_check {
 	var on_wall = check_collide_vector(check_io_dir[0], check_io_dir[1])
 	var on_entity = check_entity_vector(check_io_dir[0], check_io_dir[1])
 	if on_wall {
-		action = ACT_NONE
+		action = act.none
 	} else if on_entity { // 상호작용
-		action = ACT_ATTACK
 		target_action = on_entity
+		if target_action.stat_force == allies.player { // 완전히 동맹
+			// 위치 바꾸기
+		} else if target_action.stat_force == allies.ally_with_player { // 동맹
+			// 위치 바꾸기
+		} else if target_action.stat_force == allies.neutral { // 중립
+			// 일정 조건 하에 위치 바꾸기 혹은 다른 상호작용
+			target_last = target_action
+		} else if target_action.stat_force == allies.hosties { // 적대적
+			// 근접 공격
+			action = act.attack
+			target_last = target_action
+		} else {
+			// 위치 바꾸기
+			
+		}
 	} else { // 이동
-		action = ACT_MOVE
+		action = act.move
 		target_x = x + check_io_dir[0] * GRID
 		target_y = y + check_io_dir[1] * GRID
 		check_io_time[0] = 0
@@ -115,19 +129,19 @@ if moving_check {
 	}
 }
 
-if action != ACT_NONE {
+if action != act.none {
 	switch action {
-		case ACT_ATTACK:
+		case act.attack:
 			turn_left = false
 		break
 
-		case ACT_MOVE:
+		case act.move:
 			x = target_x
 			y = target_y
 			turn_left = false
 		break
 
-		case ACT_WAIT:
+		case act.wait:
 			turn_left = false
 		break
 
@@ -140,7 +154,7 @@ if action != ACT_NONE {
 if !turn_left {
 	turn_left = true
 	move_p = 0
-	action = ACT_NONE
+	action = act.none
 	turn_go_next()
 }
 

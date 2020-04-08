@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "44299ea3-0f0a-4634-b4bf-95bcb0eea2dc",
+            "Value": {
+                "id": "a163a5a3-96f5-43b5-9ff8-032765c033b9",
+                "resourcePath": "scripts\\io_check_status\\io_check_status.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "463f830b-e298-4409-9278-65485f442086",
             "Value": {
                 "id": "7e0cae1e-50e5-4308-a1c0-916efa40f88f",
@@ -415,6 +423,14 @@
             }
         },
         {
+            "Key": "b9baa53b-7c73-4ad8-90e3-5d7d7a16fb0c",
+            "Value": {
+                "id": "ce2d1fd4-4416-45b2-8719-df2d03762b6e",
+                "resourcePath": "scripts\\player_attack\\player_attack.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bb7017f8-3464-4b3f-aacb-cb29a09a4797",
             "Value": {
                 "id": "00bc0476-326a-487b-8b77-ffdfec9065aa",
@@ -543,6 +559,14 @@
             }
         },
         {
+            "Key": "ecf07c03-5e42-4190-a029-266e3d90052b",
+            "Value": {
+                "id": "ba5abe05-de1f-467a-931a-2e03d710b64c",
+                "resourcePath": "scripts\\io_check_inventory\\io_check_inventory.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "6fdfcd7b-9866-41b3-84a4-50002282fa3e",
@@ -572,12 +596,15 @@
         "25238115-e275-4079-886f-0967d57929d0",
         "859977ee-2886-4a16-9879-dfa5b302f90a",
         "a7e8f4f7-62f6-4ada-ae97-cef587db018d",
+        "b9baa53b-7c73-4ad8-90e3-5d7d7a16fb0c",
         "463f830b-e298-4409-9278-65485f442086",
         "e08ea33e-96e3-4254-9df6-a2918f8b35c8",
         "949f9662-8bba-4b1f-a1f7-da7df0328918",
         "424157a2-752c-4c47-af73-05f41c29f196",
         "dd85024e-d419-4221-8521-644e30b366a4",
         "67c03682-dba2-4c61-8779-d8939071da98",
+        "ecf07c03-5e42-4190-a029-266e3d90052b",
+        "44299ea3-0f0a-4634-b4bf-95bcb0eea2dc",
         "e10c8525-65c7-48b5-80cb-48b5a299b5f1",
         "d7966746-461e-46c7-bd99-4c89cb86c8fe",
         "03ed9ba2-7b99-4567-bfad-8e9aa4592cad",
