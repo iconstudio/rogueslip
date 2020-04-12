@@ -1,4 +1,5 @@
 entity_init()
+entity_set_force(allies.player)
 
 stat_exp = 0
 stat_strength = 0

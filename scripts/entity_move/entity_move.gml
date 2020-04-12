@@ -23,3 +23,6 @@ if y + vec_v < GRID {
 	y = room_height - GRID
 	vec_v = 0
 }
+
+if vec_h != 0 or vec_v != 0
+	entity_move_bare(vec_h, vec_v)

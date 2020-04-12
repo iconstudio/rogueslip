@@ -5,7 +5,12 @@
 var rx = x, ry = y
 if argument0 != 0
 	rx = x + argument0 * GRID + GRID * 0.5
+else
+	rx = x + GRID * 0.5
+
 if argument1 != 0
 	ry = y + argument1 * GRID + GRID * 0.5
+else
+	ry = y + GRID * 0.5
 
 return check_entity(rx, ry)

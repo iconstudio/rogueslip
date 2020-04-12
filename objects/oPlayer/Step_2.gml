@@ -158,20 +158,11 @@ if action != act.none {
 		case act.wait:
 			turn_left = false
 		break
-
-<<<<<<< .mine
 		case act.swap:
 			turn_left = false
 			entity_swap_position(target_action)
 		break
 
-=======
-		case act.swap:
-			entity_swap_position(target_action)
-			turn_left = false
-		break
-
->>>>>>> .theirs
 		default:
 		break
 	}
