@@ -20,8 +20,8 @@ stat_sh = 0 // 방패, 패링
 stat_move_info = [0]
 stat_move_can_door_open = true
 
-// 공격 종류, 공격력, 사정거리, 공격 실행 스크립트(목표)
-stat_attack_info = array_create(2, [0, 0, 0, -1])
+// 활성화 여부, 공격 종류, 최소 공격력, 주사위 면, 주사위 갯수, 사정거리 {타일}, 공격 실행 스크립트(목표)
+stat_attack_info = array_create(2, [false, 0, 0, 0, 0, 0, -1])
 
 // 미리 만들어진 능력의 정보를 갖고 온다.
 stat_ability_info = ds_list_create()
