@@ -10,7 +10,7 @@ var check_io_p_r = global.io_pressed_right
 var check_io_p_u = global.io_pressed_up
 var check_io_p_d = global.io_pressed_down
 
-if global.turn_current_id != id {
+if turn_current_id() != id {
 	exit
 } else if global.cursor_mode == cursor.attack {
 	

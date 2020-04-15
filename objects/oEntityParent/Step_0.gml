@@ -1,5 +1,5 @@
 /// @description 행동 및 턴 넘기기
-if global.turn_current_id != id
+if turn_current_id() != id
 	exit
 
 if !turn_left {
