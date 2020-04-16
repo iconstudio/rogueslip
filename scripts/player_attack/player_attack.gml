@@ -4,4 +4,7 @@
 var target = argument0
 var damage = 1
 
-target.stat_hp -= damage
+with target {
+	hurt = damage
+	event_user(14)
+}

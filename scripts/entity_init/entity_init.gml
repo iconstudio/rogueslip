@@ -28,6 +28,7 @@ stat_ability_info = ds_list_create()
 
 //}
 
+hurt = 0
 action = act.none
 target_action = noone
 target_last = noone
