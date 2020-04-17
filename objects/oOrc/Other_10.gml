@@ -1,3 +1,4 @@
+/*
 if x <= 0
 	x += GRID
 else if room_width - GRID <= x

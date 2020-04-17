@@ -170,7 +170,7 @@
             "Key": "410b13b4-0d99-490c-becc-aaca4685a2f0",
             "Value": {
                 "id": "0f215ffa-74f7-4207-860f-79c8f9f4a59d",
-                "resourcePath": "scripts\\turn_current_id\\turn_current_id.yy",
+                "resourcePath": "scripts\\turn_user\\turn_user.yy",
                 "resourceType": "GMScript"
             }
         },
