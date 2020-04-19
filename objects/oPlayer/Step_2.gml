@@ -93,7 +93,9 @@ if moving_hor and moving_ver {
 		check_io_dir[0] = 0
 	}
 } else if global.io_pressed_autoaction { // 자동 행동
-	
+	if instance_exists(target_last) {
+		
+	}
 } else if global.io_pressed_wait { // 대기
 	action = act.wait
 }

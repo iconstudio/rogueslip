@@ -519,6 +519,14 @@
             }
         },
         {
+            "Key": "bda74894-eb8a-4c29-9f5a-9df542875f76",
+            "Value": {
+                "id": "7528185f-08e0-41a9-8a12-837c900c2b6e",
+                "resourcePath": "scripts\\entity_deregister\\entity_deregister.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bdf7eb2a-e535-4362-bc6e-930b3567e615",
             "Value": {
                 "id": "b86f86d0-1e59-4988-b32d-8178a6eb0481",
@@ -704,6 +712,7 @@
         "51bd3073-104a-4b90-b382-ae017a62bdf6",
         "cc2575bd-5d9a-42c4-bf6d-2577ff1f0fcc",
         "dd85024e-d419-4221-8521-644e30b366a4",
+        "bda74894-eb8a-4c29-9f5a-9df542875f76",
         "b9baa53b-7c73-4ad8-90e3-5d7d7a16fb0c",
         "69a42512-ef23-4fb8-88b2-05ae7403cf9e",
         "67c03682-dba2-4c61-8779-d8939071da98",
