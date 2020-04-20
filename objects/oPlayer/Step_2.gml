@@ -93,7 +93,9 @@ if moving_hor and moving_ver {
 		check_io_dir[0] = 0
 	}
 } else if global.io_pressed_autoaction { // 자동 행동
-	if instance_exists(target_last) {
+	if instance_exists(target_last) and player_attackable(target_last) {
+		
+	} else { // 새 목표를 찾거나 이동
 		
 	}
 } else if global.io_pressed_wait { // 대기
@@ -126,9 +128,11 @@ if moving_check {
 				
 			}
 		} else if target_action.stat_force == allies.hosties { // 적대적
-			// 근접 공격
-			action = act.attack
-			target_last = target_action
+			// 공격
+			if player_attackable(target_action) {
+				action = act.attack
+				target_last = target_action
+			}
 		} else {
 			// 위치 바꾸기
 			if entity_is_sane(target_action) {
