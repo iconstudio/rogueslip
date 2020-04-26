@@ -15,6 +15,7 @@ stat_mp_max = stat_mp
 stat_ac = 0 // 방어력
 stat_ev = 0 // 회피
 stat_sh = 0 // 방패, 패링
+stat_sight = 8
 
 // 이동 방식
 stat_move_info = [0]
@@ -25,6 +26,8 @@ stat_attack_info = array_create(2, [false, 0, 0, 0, 0, 0, -1])
 
 // 미리 만들어진 능력의 정보를 갖고 온다.
 stat_ability_info = ds_list_create()
+
+stat_status_queue = ds_list_create()
 
 //}
 

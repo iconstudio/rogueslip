@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "7386540b-5d27-4721-bc9e-e3dfe9b8bddd",
+            "Value": {
+                "id": "45d4e272-cd21-4e41-bdfa-f02e920f044b",
+                "resourcePath": "scripts\\player_attackable\\player_attackable.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "74845624-b276-4e8f-acda-50feb5bf0413",
             "Value": {
                 "id": "556ee6d9-ff79-4135-8c53-7520848497f0",
@@ -332,6 +340,14 @@
                 "id": "60578756-6db4-458e-819c-067377f39e04",
                 "resourcePath": "sprites\\sOrc\\sOrc.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7c3fa96f-dc2e-4e62-a99c-fbd410def453",
+            "Value": {
+                "id": "1756a95c-27f3-4634-892f-5bfd13b5c603",
+                "resourcePath": "scripts\\entity_in_view\\entity_in_view.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -666,6 +682,7 @@
         "e08ea33e-96e3-4254-9df6-a2918f8b35c8",
         "f7089617-9929-44b6-803c-da2a1f9d1107",
         "ba454466-3e8e-46ac-b022-9d5ab645373a",
+        "7c3fa96f-dc2e-4e62-a99c-fbd410def453",
         "424157a2-752c-4c47-af73-05f41c29f196",
         "a7e8f4f7-62f6-4ada-ae97-cef587db018d",
         "b7c832f5-08a8-49e0-b6a1-06657bf034d7",
@@ -673,6 +690,7 @@
         "cc2575bd-5d9a-42c4-bf6d-2577ff1f0fcc",
         "dd85024e-d419-4221-8521-644e30b366a4",
         "bda74894-eb8a-4c29-9f5a-9df542875f76",
+        "7386540b-5d27-4721-bc9e-e3dfe9b8bddd",
         "b9baa53b-7c73-4ad8-90e3-5d7d7a16fb0c",
         "69a42512-ef23-4fb8-88b2-05ae7403cf9e",
         "67c03682-dba2-4c61-8779-d8939071da98",
